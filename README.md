@@ -1,6 +1,18 @@
 # Power BI Tricks & Highlights
 Welcome to the Power BI Tricks & Highlights repository! 🎉
 
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td>
+      <img src="img/PowerBI.jpg" alt="Project Image" width="300" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+      <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
+    </td>
+    <td>
+      <img src="img/PowerQuery.jpg" alt="Project Image" width="500" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+    </td>
+  </tr>
+</table>
+
 This repository is a one-stop resource for:
 - **Power Query**: Data transformation tips and advanced techniques.
 - **DAX**: Dynamic calculations and performance optimization tricks.
