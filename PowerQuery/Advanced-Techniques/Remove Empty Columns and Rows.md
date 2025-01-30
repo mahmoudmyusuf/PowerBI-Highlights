@@ -5,6 +5,8 @@ This guide explains how to **manually** and **automatically** remove empty colum
 
 ---
 
+<img src="/img/EmptyColumns.jpg" alt="Empty Columns Image" width="300" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+
 ## Manual Steps to Remove Empty Columns and Rows
 
 ### 1. Remove Empty Columns Manually
