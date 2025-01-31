@@ -6,6 +6,17 @@ This guide provides a step-by-step solution to transform multiple header rows in
 
 <img src="/img/Blank-Rows & Columns & Mutliple Headers.jpg" alt="Empty Columns Image" width="800" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
 
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td>
+      <img src="/img/Blank-Rows & Columns & Mutliple Headers.jpgg" alt="Project Image" width="200" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+    </td>
+    <td>
+        <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
+      <img src="/img/Blank-Rows & Columns & Mutliple Headers.jpg" alt="Project Image" width="600" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+    </td>
+  </tr>
+</table>
 ---
 
 ## **Overview**
