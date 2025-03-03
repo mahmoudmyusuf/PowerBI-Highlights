@@ -212,7 +212,7 @@ Here’s the combined table with all the relevant data:
 ✔ **Use `TOPN` for ranking and leaderboard reports.**  
 
 ---
-## ⚡ Differences between (`FILTER`) and `CALCULATE` with direct conditions
+## ⚡ Differences between (`FILTER`) and (`CALCULATE` with direct conditions)
 
 The differences in Performance (Speed), Accuracy, and Efficiency Between **Row-Level and Context-Level Filtering in DAX**  
 
