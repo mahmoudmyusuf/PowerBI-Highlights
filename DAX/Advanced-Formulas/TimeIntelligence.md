@@ -136,6 +136,14 @@ ADDCOLUMNS(
 
 ## 📌 Key Features of Time Intelligence
 
+The total summary can be calculated using the following DAX expression:
+
+```DAX
+Total Sales = SUM(Orders[Sales])
+```
+Once the **Total Sales** measure is defined, various **time intelligence functions** can be applied to perform advanced date-based analysis.
+
+
 ### 🔄 1. Period Comparisons
 These functions allow you to compare data from different time periods, such as:
 - 📊 Year-over-Year (YoY), Month-over-Month (MoM), and Week-over-Week (WoW) comparisons.
@@ -145,6 +153,7 @@ These functions allow you to compare data from different time periods, such as:
 YoY Sales = CALCULATE(SUM(Sales[Amount]), SAMEPERIODLASTYEAR(Calendar[Date]))
 ```
 This formula calculates the total sales for the same period in the previous year.
+<img src="img/YOY_data.png" alt="Project Image" width="600" style="margin-bottom: 15px;" />
 
 ---
 
