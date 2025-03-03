@@ -212,7 +212,9 @@ Here’s the combined table with all the relevant data:
 ✔ **Use `TOPN` for ranking and leaderboard reports.**  
 
 ---
-## ⚡ **Differences in Performance (Speed), Accuracy, and Efficiency Between Row-Level and Context-Level Filtering in DAX**  
+## ⚡ Differences between (`FILTER`) and `CALCULATE` with direct conditions
+
+The differences in Performance (Speed), Accuracy, and Efficiency Between **Row-Level and Context-Level Filtering in DAX**  
 
  **Row-Level filtering (`FILTER`)** versus **Context-Level filtering (`CALCULATE` with direct conditions)** in Power BI.
 
