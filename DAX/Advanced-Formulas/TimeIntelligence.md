@@ -150,7 +150,7 @@ These functions allow you to compare data from different time periods, such as:
 
 ✅ **Example: Year-over-Year Sales Comparison**
 ```DAX
-YoY Sales = CALCULATE(SUM(Sales[Amount]), SAMEPERIODLASTYEAR(Calendar[Date]))
+YoY Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Calendar[Date]))
 ```
 This formula calculates the total sales for the same period in the previous year.
 <img src="img/YOY_data.png" alt="Project Image" width="600" style="margin-bottom: 15px;" />
@@ -162,7 +162,7 @@ You can calculate cumulative values like **running totals** or **year-to-date (Y
 
 ✅ **Example: Year-to-Date (YTD) Sales Calculation**
 ```DAX
-Sales YTD = TOTALYTD(SUM(Sales[Amount]), Calendar[Date])
+Sales YTD = TOTALYTD([Total Sales], Calendar[Date])
 ```
 This formula accumulates sales from the beginning of the year to the current date.
 
@@ -184,7 +184,7 @@ These functions allow comparisons with previous periods, such as the **previous 
 
 ✅ **Example: Previous Month Sales Calculation**
 ```DAX
-Previous Month Sales = CALCULATE(SUM(Sales[Amount]), PREVIOUSMONTH(Calendar[Date]))
+Previous Month Sales = CALCULATE([Total Sales], PREVIOUSMONTH(Calendar[Date]))
 ```
 This formula retrieves the total sales for the **previous month**.
 
@@ -195,7 +195,7 @@ If your organization follows a **fiscal year** instead of a calendar year, you c
 
 ✅ **Example: Fiscal Year-to-Date Calculation**
 ```DAX
-Fiscal YTD Sales = TOTALYTD(SUM(Sales[Amount]), Calendar[Date], "06-30")
+Fiscal YTD Sales = TOTALYTD([Total Sales], Calendar[Date], "06-30")
 ```
 This formula calculates YTD sales, assuming the **fiscal year ends on June 30th**.
 
