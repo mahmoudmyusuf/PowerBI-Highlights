@@ -127,7 +127,7 @@ ADDCOLUMNS(
 - 📌 Ensure the Calendar table has a **relationship with the fact table** using the `Date` column.
 - 📌 **Mark the table as a Date Table** in Power BI (**Modeling** → **Mark as Date Table**).
 - 📌 Add additional columns like **Fiscal Year or Holidays** if needed.
-- 📌 When using **Month or Day in numbers**, it's better to use **`MM` or `dd`** for **better sorting** in dashboards.
+- 📌 When using **Month or Day in numbers**, it's better to use **`MM` or `dd`** instead of **`M` or `d`** for **better sorting** in dashboards.
 - 📌 Adjust the **`CALENDAR`** function range based on your data requirements.
 - 📌 Add more columns for **fiscal periods, holidays, or ISO weeks** as needed.
 
