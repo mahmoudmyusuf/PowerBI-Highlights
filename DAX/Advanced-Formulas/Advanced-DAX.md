@@ -32,7 +32,7 @@ Power BI offers multiple ways to filter data using DAX. This section covers vari
 - 🔄 **REMOVEFILTERS**  
 - 🔗 **CROSSFILTER**  
 
-🔗 **[Check here](./Filtering%20in%20Power%20BI%20(DAX).md) for Filtering in Power BI.**  
+🔗 **[Check here](Filtering-DAXs.md) for Filtering in Power BI.**  
 
 ---
 
