@@ -9,10 +9,27 @@ The **TOPN** function returns the top N rows of a table based on a specific colu
 TOPN(N, <table>, <orderBy_expression>, <order[DESC/ASC]>)
 ```
 
-### **Example: Top 3 Sales Orders**
+### **Example: Top 5 Sales Orders**
 ```DAX
-Top 3 Sales =
-TOPN(3, Orders, Orders[Sales], DESC)
+Top 5 Sales All Columns = TOPN(5, Orders, Orders[Sales], DESC)
+```
+### **Example: Top 5 Sales Orders with selected Columns**
+**🛠️ Create a New Table Using `SUMMARIZE` + `TOPN`**  
+```DAX
+Top 5 Orders Table = 
+VAR TopOrders = 
+    TOPN(5, 
+        Orders, 
+        Orders[Sales], DESC
+    )
+
+RETURN
+    SUMMARIZE(
+        TopOrders, 
+        Orders[Order ID], 
+        Orders[Customer Name], 
+        Orders[Sales]
+    )
 ```
 
 ## **🔹 Making `TOPN` Tables Responsive to Filters and Visuals in Power BI**  
@@ -24,8 +41,7 @@ By default, `TOPN` ignores existing filters and returns a static result. However
 
 #### **📌 Example: Static `TOPN` Calculation**  
 ```DAX
-Top 5 Sales Static = 
-TOPN(5, Orders, Orders[Sales], DESC)
+Top 5 Sales = TOPN(5, Orders, Orders[Sales], DESC)
 ```
 🔴 **Issue:**  
 - ❌ This table will always show the same 5 orders, ignoring filters!  
@@ -53,34 +69,7 @@ CALCULATE(
 
 ---
 
-### **3️⃣ How to Create a Dynamic `TOPN` Table in Power BI**  
-📊 You can create a **dynamic table** that changes based on slicers and visuals.  
-
-#### **🛠️ Step 1: Create a New Table Using `SUMMARIZE` + `TOPN`**  
-```DAX
-Top 5 Orders Table = 
-VAR TopOrders = 
-    TOPN(5, 
-        ALLSELECTED(Orders), 
-        Orders[Sales], DESC
-    )
-
-RETURN
-    SUMMARIZE(
-        TopOrders, 
-        Orders[Order ID], 
-        Orders[Customer Name], 
-        Orders[Sales]
-    )
-```
-✅ **Why This Works?**  
-✔️ `ALLSELECTED(Orders)`: Ensures the table respects the filters from visuals.  
-✔️ `SUMMARIZE`: Selects only the needed columns.  
-✔️ `TOPN(5, ...)`: Dynamically selects the top 5 based on **filtered data**.  
-
----
-
-### **4️⃣ 🚀 Bonus: Make the "Top N" Value User-Controlled**  
+### **3️⃣ 🚀 Bonus: Make the "Top N" Value User-Controlled**  
 You can allow users to **choose how many top results they want** using a slicer.  
 
 #### **🛠️ Step 1: Create a "Top N" Parameter**  
@@ -110,8 +99,8 @@ RETURN
 | **🛠️ Solution** | **⚙️ How It Works** | **📈 Best Use Case** |
 |-------------|----------------|-----------------|
 | **Basic `TOPN` (Static)** | Always returns the same Top N | ❌ Doesn't change with filters |
+| **`TOPN` + `SUMMARIZE` (Table)** | Always returns the same Top N | ❌ Doesn't change with filters |
 | **`TOPN` + `ALLSELECTED`** | Updates based on visual filters | ✅ Works dynamically in reports |
-| **`TOPN` + `SUMMARIZE` (Table)** | Creates a filtered table of Top N | ✅ Best for detailed analysis |
 | **User-Controlled `Top N`** | Lets users choose the number of top results | 🚀 Best for interactive dashboards |
 
 ---
