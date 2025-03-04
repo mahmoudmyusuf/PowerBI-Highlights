@@ -206,7 +206,7 @@ CALCULATE(
 
 ---
 
-![Animated GIF](Filtering.gif)
+![Animated GIF](img/Filtering.gif)
 
 ---
 
