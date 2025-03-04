@@ -61,7 +61,7 @@ The **FILTER** function returns a table that meets a given condition. It is ofte
 FILTER(<table>, <condition>)
 ```
 
-### **Example: Sales for Orders Where Quantity > 10**
+### **Example: Apply Two Filters**
 ```DAX
 Total Sales Filter = 
 CALCULATE(
