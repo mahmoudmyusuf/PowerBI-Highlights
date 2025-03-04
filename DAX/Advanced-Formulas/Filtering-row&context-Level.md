@@ -202,7 +202,8 @@ If we need to filter based on a condition that depends on **multiple columns**, 
 Total Sales Large Electronics Orders =
 CALCULATE(
     SUM(Orders[Sales]),
-    FILTER(Orders, Orders[Quantity] > 10 && Orders[Category] = "Electronics")
+    FILTER(Orders, Orders[Quantity] > 10 &&
+    Orders[Category] = "Electronics")
 )
 ```
 
@@ -226,17 +227,20 @@ CALCULATE(
 
 ```DAX
 Total Sales Electronics =
-CALCULATE(SUM(Orders[Sales]), Orders[Category] = "Electronics")
+CALCULATE(SUM(Orders[Sales]),
+    Orders[Category] = "Electronics")
 ```
 
 ✅ **Easy to read**  
 
 Now compare this with:
 
-DAX
+```DAX
 Total Sales Electronics Filter =
-CALCULATE(SUM(Orders[Sales]), FILTER(Orders, Orders[Category] = "Electronics"))
-
+CALCULATE(SUM(Orders[Sales]),
+    FILTER(Orders, 
+    Orders[Category] = "Electronics"))
+```
 
 ❌ **More complex** and unnecessary for simple filters.
 
