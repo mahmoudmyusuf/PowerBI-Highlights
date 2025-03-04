@@ -141,7 +141,7 @@ The total summary can be calculated using the following DAX expression:
 ```DAX
 Total Sales = SUM(Orders[Sales])
 ```
-Once the **Total Sales** measure is defined, various **time intelligence functions** can be applied to perform advanced date-based analysis.
+Once the **Total Sales** measure is defined, various **Time Intelligence Functions** can be applied to perform advanced date-based analysis.
 
 
 ### 🔄 1. Period Comparisons
