@@ -1,56 +1,75 @@
-# 📘 Advanced Power BI DAX Techniques
 
-This repository contains detailed explanations of advanced **DAX filtering and time intelligence** concepts in Power BI. Below are the key topics covered:
+# 📘 Advanced DAX Concepts in Power BI  
 
-## 📅 **Time Intelligence in Power BI** ([TimeIntelligence.md](TimeIntelligence.md))
-Time Intelligence functions in DAX enable time-based calculations such as period comparisons, cumulative totals, and trends over time. These functions are essential for financial, sales, and operational reporting.
+This repository contains in-depth explanations of key **DAX (Data Analysis Expressions) concepts** in Power BI, focusing on **time intelligence, filtering, and row/context-level calculations**. Each section includes examples, best practices, and performance insights.  
 
-### 📌 **Contents:**
-✅ Prerequisites for Time Intelligence Functions  
-✅ Steps to Create a Calendar Table  
-✅ Best Practices  
-✅ Key Features of Time Intelligence  
+## 📂 Contents  
 
----
+### ⏳ **Time Intelligence in Power BI**  
+Time Intelligence functions in DAX enable users to perform **time-based calculations** efficiently. These functions help analyze trends, compare periods, and calculate cumulative values over time—essential for financial, sales, and operational reporting.  
 
-## 🔍 **Filtering in Power BI (DAX)** ([Filtering in Power BI (DAX).md](Filtering-row&context-Level.md))
-DAX provides multiple filtering functions to refine data analysis. This section covers different filtering approaches, their use cases, and best practices.
+📖 **Topics Covered:**  
+- ✅ Prerequisites for Time Intelligence Functions  
+- ✅ Steps to Create a Calendar Table  
+- ✅ Best Practices  
+- ✅ Key Features of Time Intelligence  
 
-### 📌 **Contents:**
-✅ **CALCULATE** - Column-Level Filtering  
-✅ **FILTER** - Row-Level Filtering  
-✅ **TOPN** - Top N Filtering  
-✅ **ALL** - Removes Filters  
-✅ **ALLEXCEPT** - Removes Filters Except Certain Columns  
-✅ **ALLSELECTED** - Respects Applied Filters  
-✅ **KEEPFILTERS** - Preserves Existing Filters  
-✅ **REMOVEFILTERS** - Removes Specific Filters  
-✅ **CROSSFILTER** - Controls Relationships Between Tables  
+🔗 **[Click here](./TimeIntelligence.md) to explore Time Intelligence functions.**  
 
 ---
 
-## ⚖ **Row-Level vs. Context-Level Filtering** ([Filtering-row&context-Level.md](Filtering-row&context-Level.md))
-DAX calculations operate at different levels, impacting how results are computed. This section clarifies the difference between **row-level and context-level** calculations and how to apply them correctly.
+### 🎯 **Filtering in Power BI (DAX)**  
+Power BI offers multiple ways to filter data using DAX. This section covers various **filtering functions**, including their use cases and performance comparisons.  
 
-### 📌 **Contents:**
-✅ Row-Level Calculation  
-✅ Context-Level Calculation  
-✅ Key Differences  
-✅ Row-Level and Context-Level Filtering  
-✅ Key Difference Between Row-Level and Context-Level Filtering  
-✅ Filtering with `FILTER` vs. `CALCULATE`  
+📖 **Topics Covered:**  
+- 🎯 **CALCULATE** (Column-Level Filtering)  
+- 🔎 **FILTER** (Row-Level Filtering)  
+- 📊 **TOPN** (Top N Filtering)  
+- ❌ **ALL** (Removes Filters)  
+- 🚀 **ALLEXCEPT**  
+- 🎛 **ALLSELECTED**  
+- 🛠 **KEEPFILTERS**  
+- 🔄 **REMOVEFILTERS**  
+- 🔗 **CROSSFILTER**  
 
----
-
-## 🔝 **Top N Filtering in Power BI** ([TopN.md](TopN.md))
-The `TOPN` function is used to extract the top N rows from a table based on a given column. This section explains how to use `TOPN` effectively, including handling its limitations.
-
-### 📌 **Contents:**
-✅ The Problem: `TOPN` Ignores Filters  
-✅ Solution: Use `TOPN` Inside `CALCULATE` with `ALLSELECTED`  
-✅ How to Create a Dynamic `TOPN` Table in Power BI  
-✅ Bonus: Make the "Top N" Value User-Controlled  
+🔗 **[Check here](./Filtering%20in%20Power%20BI%20(DAX).md) for Filtering in Power BI.**  
 
 ---
 
-🚀 **Stay tuned for more insights and advanced DAX techniques!** 🎯
+### ⚡ **Row-Level & Context-Level Filtering**  
+DAX calculations work at different granularities, such as **row-level** and **context-level** filtering. This section explains their differences and when to use each.  
+
+📖 **Topics Covered:**  
+- ✅ **Row-Level Calculation**  
+- ✅ **Context-Level Calculation**  
+- ✅ **Key Differences**  
+- ✅ **Row-Level and Context-Level Filtering**  
+- ✅ **Filtering with `FILTER` vs `CALCULATE`**  
+
+🔗 **[Check here](./Filtering-row%26context-Level.md) to understand Row & Context-Level Filtering.**  
+
+---
+
+### 🔝 **TopN in Power BI (DAX)**  
+The `TOPN` function is useful for ranking and selecting the **top N rows** based on specific criteria. This section covers its behavior, common issues, and how to enhance its functionality.  
+
+📖 **Topics Covered:**  
+- 📌 **The Problem: TOPN Ignores Filters**  
+- ✅ **Solution: Use `TOPN` Inside `CALCULATE` with `ALLSELECTED`**  
+- 🏆 **How to Create a Dynamic TOPN Table in Power BI**  
+- 🎛 **Bonus: Make the "Top N" Value User-Controlled**  
+
+🔗 **[Check here](./TopN.md) for TopN function details.**  
+
+---
+
+## 📌 **Contributing**  
+If you’d like to contribute, feel free to submit pull requests or open issues. Let’s enhance this knowledge base together! 🚀  
+
+## 📜 **License**  
+This repository is open-source and available under the MIT License.  
+
+---
+
+Happy Learning! 🎓✨  
+
