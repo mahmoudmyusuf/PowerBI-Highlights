@@ -2,6 +2,14 @@
 
 Power BI provides multiple ways to filter data using DAX. Some of the key functions include **CALCULATE**, **FILTER**, and **TOPN**, along with other filtering functions. Below is a detailed explanation of each with examples and differences.
 
+
+The total summary can be calculated using the following DAX expression:
+
+```DAX
+Total Sales = SUM(Orders[Sales])
+```
+Once the **Total Sales** measure is defined, various **Filtering functions** can be applied to perform advanced analysis.
+
 ---
 
 ## 🔍 **1. CALCULATE (Column-Level Filtering)**
@@ -15,12 +23,22 @@ The **CALCULATE** function is one of the most powerful DAX functions. It **modif
 CALCULATE(<expression>, <filter1>, <filter2>, ...)
 ```
 
-### **Example: Sales for Electronics Category**
+### **Example: Sales for Office Supplies**
 ```DAX
-Total Sales Electronics =
+Total Sales Office = 
 CALCULATE(
-    SUM(Orders[Sales]),
-    Orders[Category] = "Electronics"
+    [Total Sales],
+    Orders[Category] = "Office Supplies"
+)
+```
+
+### **Example: Apply Two Filters**
+```DAX
+Total Sales Calculate = 
+CALCULATE(
+    [Total Sales],
+    Orders[Category] = "Office Supplies",
+    Orders[Quantity] > 5
 )
 ```
 
@@ -45,10 +63,11 @@ FILTER(<table>, <condition>)
 
 ### **Example: Sales for Orders Where Quantity > 10**
 ```DAX
-Total Sales Large Orders =
+Total Sales Filter = 
 CALCULATE(
-    SUM(Orders[Sales]),
-    FILTER(Orders, Orders[Quantity] > 10)
+    [Total Sales],
+    FILTER(Orders, [Category] = "Office Supplies" &&
+    Orders[Quantity] > 5)
 )
 ```
 
@@ -73,8 +92,7 @@ TOPN(N, <table>, <orderBy_expression>, <order[DESC/ASC]>)
 
 ### **Example: Top 3 Sales Orders**
 ```DAX
-Top 3 Sales =
-TOPN(3, Orders, Orders[Sales], DESC)
+Top 3 Sales = TOPN(3, Orders, Orders[Sales], DESC)
 ```
 
 ### **Key Features:**
@@ -93,7 +111,7 @@ TOPN(3, Orders, Orders[Sales], DESC)
 ```DAX
 Total Sales All =
 CALCULATE(
-    SUM(Orders[Sales]),
+    [Total Sales],
     ALL(Orders)
 )
 ```
@@ -110,7 +128,7 @@ CALCULATE(
 ```DAX
 Total Sales by Category =
 CALCULATE(
-    SUM(Orders[Sales]),
+     [Total Sales],
     ALLEXCEPT(Orders, Orders[Category])
 )
 ```
@@ -127,7 +145,7 @@ CALCULATE(
 ```DAX
 Total Sales Selected =
 CALCULATE(
-    SUM(Orders[Sales]),
+    [Total Sales],
     ALLSELECTED(Orders)
 )
 ```
@@ -144,8 +162,8 @@ CALCULATE(
 ```DAX
 Total Sales Multi-Filter =
 CALCULATE(
-    SUM(Orders[Sales]),
-    KEEPFILTERS(Orders[Category] = "Electronics"),
+    [Total Sales],
+    KEEPFILTERS(Orders[Category] = "Office Supplies"),
     Orders[Quantity] > 5
 )
 ```
@@ -162,7 +180,7 @@ CALCULATE(
 ```DAX
 Total Sales No Category Filter =
 CALCULATE(
-    SUM(Orders[Sales]),
+     [Total Sales],
     REMOVEFILTERS(Orders[Category])
 )
 ```
@@ -177,10 +195,10 @@ CALCULATE(
 
 ### **Example: Change Filter Direction in a Relationship**
 ```DAX
-Total Sales CrossFilter =
+Total Return CrossFilter = 
 CALCULATE(
-    SUM(Orders[Sales]),
-    CROSSFILTER(Customers[CustomerID], Orders[CustomerID], BOTH)
+     [Total Return],
+    CROSSFILTER(Returns[Order ID], Orders[Order ID], BOTH)
 )
 ```
 - **Changes relationship** between `Customers` and `Orders` to **bidirectional**.
