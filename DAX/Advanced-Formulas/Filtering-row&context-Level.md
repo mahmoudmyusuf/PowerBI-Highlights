@@ -140,6 +140,7 @@ CALCULATE(
 
 ---
 
+
 # Filtering with `FILTER` versus `CALCULATE`
 The differences in Performance (Speed), Accuracy, and Efficiency Between 
  **Row-Level filtering** (e.g.,**FILTER**) versus **Context-Level filtering** (e.g.,**CALCULATE with direct conditions**) in Power BI **DAX**.
