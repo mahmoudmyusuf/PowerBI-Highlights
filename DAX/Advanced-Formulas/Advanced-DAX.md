@@ -13,7 +13,7 @@ Time Intelligence functions in DAX enable time-based calculations such as period
 
 ---
 
-## 🔍 **Filtering in Power BI (DAX)** ([Filtering in Power BI (DAX).md](Filtering%20in%20Power%20BI%20(DAX).md))
+## 🔍 **Filtering in Power BI (DAX)** ([Filtering in Power BI (DAX).md](Filtering-row&context-Level.md))
 DAX provides multiple filtering functions to refine data analysis. This section covers different filtering approaches, their use cases, and best practices.
 
 ### 📌 **Contents:**
