@@ -206,6 +206,9 @@ CALCULATE(
 
 ---
 
+![Animated GIF](Filtering.gif)
+
+---
 
 ### **🔒 Final Summary: Choosing the Best Filter**
 Here’s the combined table with all the relevant data:  
