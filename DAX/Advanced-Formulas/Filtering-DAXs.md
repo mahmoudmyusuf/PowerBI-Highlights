@@ -205,6 +205,11 @@ CALCULATE(
 - Useful for **custom filtering logic**.
 
 ---
+### 🎬 Visualizing DAX Filtering
+
+This animated image illustrates the fundamental differences between **row-level filtering (`FILTER`)** and **context-level filtering (`CALCULATE`)** in DAX.  
+
+By visualizing these differences, the animation highlights how **each approach impacts performance, accuracy, and usability in Power BI**. Understanding when to use `FILTER` versus `CALCULATE` ensures optimized DAX calculations for better reporting and analysis. 🚀
 
 ![Animated GIF](img/Filtering.gif)
 
