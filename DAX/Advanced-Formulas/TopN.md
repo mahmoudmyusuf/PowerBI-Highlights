@@ -94,6 +94,15 @@ RETURN
 
 ---
 
+### 🎬 Visualizing TOPN DAX
+This animated image illustrates how the TOPN function works in Power BI and the differences between static and dynamic ranking in DAX.
+
+The animation highlights how TOPN behaves with and without filtering, demonstrating the impact of functions like ALLSELECTED and CALCULATE. By understanding these differences, users can build interactive reports that dynamically adjust based on slicers and visual filters, optimizing data analysis and decision-making. 🚀
+
+![Animated GIF](img/TopN.gif)
+
+---
+
 ### **5️⃣ 🎯 Conclusion**  
 
 | **🛠️ Solution** | **⚙️ How It Works** | **📈 Best Use Case** |
