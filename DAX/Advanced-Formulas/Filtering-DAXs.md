@@ -44,8 +44,9 @@ CALCULATE(
 
 ### **Key Features:**
 ✅ Used to modify the existing filter context.  
+- **In Previous DAX**: The final result only includes "Office Supplies", ignoring any previous category selections.
 ✅ Can be combined with other filters like `FILTER`, `ALL`, `ALLSELECTED`, etc.  
-✅ **Filters the entire table** where `Category = "Electronics"`.  
+✅ **Filters the entire table** where `Category = "Electronics"` and `Quantity > 5`.  
 ✅ **Fast** because it applies column-level filtering.
 
 ---
@@ -74,7 +75,7 @@ CALCULATE(
 ### **Key Features:**
 ✅ Works at the row level, returning a subset of the original table.  
 ✅ Used inside functions like `CALCULATE`, `SUMX`, `AVERAGEX`, etc.  
-✅ **Scans each row individually** to check if `Quantity > 10`.  
+✅ **Scans each row individually** to check if `Category = "Electronics"` and `Quantity > 5`.  
 ✅ **Slower** than `CALCULATE` because it loops through rows.
 
 ---
@@ -115,8 +116,10 @@ CALCULATE(
     ALL(Orders)
 )
 ```
-- Ignores **all filters** applied to the `Orders` table.
-- Useful for **percentages and total comparisons**.
+
+### **Key Features:**
+✅ Ignores **all filters** applied to the `Orders` table.
+✅ Useful for **percentages and total comparisons**.
 
 ---
 
@@ -132,8 +135,10 @@ CALCULATE(
     ALLEXCEPT(Orders, Orders[Category])
 )
 ```
-- **Removes all filters** except for `Category`.
-- Useful for keeping hierarchy filters in reports.
+
+### **Key Features:**
+✅ **Removes all filters** except for `Category`.
+✅ Useful for keeping hierarchy filters in reports.
 
 ---
 
@@ -149,8 +154,10 @@ CALCULATE(
     ALLSELECTED(Orders)
 )
 ```
-- Keeps only the filters **applied in the report visual**.
-- Useful for interactive dashboards.
+
+### **Key Features:**
+✅ Keeps only the filters **applied in the report visual**.
+✅ Useful for interactive dashboards.
 
 ---
 
@@ -167,8 +174,11 @@ CALCULATE(
     Orders[Quantity] > 5
 )
 ```
-- Keeps the existing filter on `Category` and **adds** the `Quantity` filter.
-- Useful for **combining multiple filters**.
+
+### **Key Features:**
+✅ Keeps the existing filter on `Category` and **adds** the `Quantity` filter.  
+- **In Previous DAX**: KEEPFILTERS preserves any existing filters on `Orders[Category]` and applies "Office Supplies" on top of them.
+✅ Useful for **combining multiple filters**.
 
 ---
 
@@ -184,8 +194,10 @@ CALCULATE(
     REMOVEFILTERS(Orders[Category])
 )
 ```
-- Removes only the `Category` filter.
-- Useful for **dynamic calculations**.
+
+### **Key Features:**
+✅ Removes only the `Category` filter.
+✅ Useful for **dynamic calculations**.
 
 ---
 
@@ -201,8 +213,10 @@ CALCULATE(
     CROSSFILTER(Returns[Order ID], Orders[Order ID], BOTH)
 )
 ```
-- **Changes relationship** between `Customers` and `Orders` to **bidirectional**.
-- Useful for **custom filtering logic**.
+
+### **Key Features:**
+✅ **Changes relationship** between `Customers` and `Orders` to **bidirectional**.
+✅ Useful for **custom filtering logic**.
 
 ---
 ### 🎬 Visualizing DAX Filtering
