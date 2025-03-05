@@ -44,7 +44,7 @@ CALCULATE(
 
 ### **Key Features:**
 ✅ Used to modify the existing filter context.  
-- **In Previous DAX**: The final result only includes "Office Supplies", ignoring any previous category selections.
+   **In Previous DAX**: The final result only includes "Office Supplies", ignoring any previous category selections. <br>
 ✅ Can be combined with other filters like `FILTER`, `ALL`, `ALLSELECTED`, etc.  
 ✅ **Filters the entire table** where `Category = "Electronics"` and `Quantity > 5`.  
 ✅ **Fast** because it applies column-level filtering.
@@ -177,7 +177,7 @@ CALCULATE(
 
 ### **Key Features:**
 ✅ Keeps the existing filter on `Category` and **adds** the `Quantity` filter.  
-- **In Previous DAX**: KEEPFILTERS preserves any existing filters on `Orders[Category]` and applies "Office Supplies" on top of them.
+ **In Previous DAX**: KEEPFILTERS preserves any existing filters on `Orders[Category]` and applies "Office Supplies" on top of them. <br>
 ✅ Useful for **combining multiple filters**.
 
 ---
