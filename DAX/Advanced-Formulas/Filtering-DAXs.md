@@ -43,11 +43,12 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Used to modify the existing filter context.  
-   **In Previous DAX**: The final result only includes "Office Supplies", ignoring any previous category selections. <br>
-✅ Can be combined with other filters like `FILTER`, `ALL`, `ALLSELECTED`, etc.  
-✅ **Filters the entire table** where `Category = "Electronics"` and `Quantity > 5`.  
-✅ **Fast** because it applies column-level filtering.
+- ✅ Used to modify the existing filter context.  
+  - **In Previous DAX**: The final result only includes "Office Supplies", ignoring any previous category selections.  
+- ✅ Can be combined with other filters like `FILTER`, `ALL`, `ALLSELECTED`, etc.  
+- ✅ **Filters the entire table** where `Category = "Electronics"` and `Quantity > 5`.  
+- ✅ **Fast** because it applies column-level filtering.  
+
 
 ---
 
@@ -73,10 +74,11 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Works at the row level, returning a subset of the original table.  
-✅ Used inside functions like `CALCULATE`, `SUMX`, `AVERAGEX`, etc.  
-✅ **Scans each row individually** to check if `Category = "Electronics"` and `Quantity > 5`.  
-✅ **Slower** than `CALCULATE` because it loops through rows.
+- ✅ Works at the row level, returning a subset of the original table.  
+- ✅ Used inside functions like `CALCULATE`, `SUMX`, `AVERAGEX`, etc.  
+- ✅ **Scans each row individually** to check if `Category = "Electronics"` and `Quantity > 5`.  
+- ✅ **Slower** than `CALCULATE` because it loops through rows.  
+
 
 ---
 
@@ -97,10 +99,11 @@ Top 3 Sales = TOPN(3, Orders, Orders[Sales], DESC)
 ```
 
 ### **Key Features:**
-✅ Returns a table, not a single value.  
-✅ Often used inside `SUMX`, `CALCULATE`, or visual-level filters.  
-✅ Returns the **top 3 rows** based on `Sales`.  
-✅ Useful for **ranking and leaderboard reports**.
+- ✅ Returns a **table**, not a single value.  
+- ✅ Often used inside `SUMX`, `CALCULATE`, or visual-level filters.  
+- ✅ Returns the **top 3 rows** based on `Sales`.  
+- ✅ Useful for **ranking and leaderboard reports**.  
+
 
 ---
 
@@ -118,8 +121,8 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Ignores **all filters** applied to the `Orders` table.
-✅ Useful for **percentages and total comparisons**.
+- ✅ **Ignores all filters** applied to the `Orders` table.  
+- ✅ Useful for **percentages and total comparisons**.  
 
 ---
 
@@ -137,8 +140,9 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ **Removes all filters** except for `Category`.
-✅ Useful for keeping hierarchy filters in reports.
+- ✅ **Removes all filters** except for `Category`.  
+- ✅ Useful for keeping hierarchy filters in reports.  
+
 
 ---
 
@@ -156,8 +160,9 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Keeps only the filters **applied in the report visual**.
-✅ Useful for interactive dashboards.
+- ✅ **Keeps only the filters** applied in the report visual.  
+- ✅ Useful for **interactive dashboards**.  
+
 
 ---
 
@@ -176,9 +181,10 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Keeps the existing filter on `Category` and **adds** the `Quantity` filter.  
- **In Previous DAX**: KEEPFILTERS preserves any existing filters on `Orders[Category]` and applies "Office Supplies" on top of them. <br>
-✅ Useful for **combining multiple filters**.
+- ✅ **Keeps the existing filter** on `Category` and **adds** the `Quantity` filter.  
+  - **In Previous DAX**: `KEEPFILTERS` preserves any existing filters on `Orders[Category]` and applies "Office Supplies" on top of them.  
+- ✅ Useful for **combining multiple filters**.  
+
 
 ---
 
@@ -196,8 +202,9 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ Removes only the `Category` filter.
-✅ Useful for **dynamic calculations**.
+- ✅ **Removes only** the `Category` filter.  
+- ✅ Useful for **dynamic calculations**.  
+
 
 ---
 
@@ -215,8 +222,9 @@ CALCULATE(
 ```
 
 ### **Key Features:**
-✅ **Changes relationship** between `Customers` and `Orders` to **bidirectional**.
-✅ Useful for **custom filtering logic**.
+- ✅ **Changes relationship** between `Customers` and `Orders` to **bidirectional**.  
+- ✅ Useful for **custom filtering logic**.  
+
 
 ---
 ### 🎬 Visualizing DAX Filtering
